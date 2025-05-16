@@ -51,6 +51,56 @@ body {
 /*---------------------------------------
   TYPOGRAPHY               
 -----------------------------------------*/
+details summary {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #e3e3e3;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  list-style: none; /* removes default arrow */
+  position: relative;
+}
+
+/* Optional: Custom arrow icon using ::after */
+details summary::after {
+  content: "▼";
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s;
+}
+
+/* Rotating the arrow when open */
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/* Add hover effect */
+details summary:hover {
+  background-color: #d4d4d4;
+}
+
+/* Collapsible content */
+details > div,
+details > section,
+details > ul {
+  padding: 10px 20px 20px 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 20px;
+}
+
+/* Heading styling */
+h3, h4 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
 
 h2,
 h3,
