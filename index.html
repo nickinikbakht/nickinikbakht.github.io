@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,6 +73,39 @@
 
         .nav-links a:hover {
             color: var(--secondary);
+        }
+
+        /* Quick Access Buttons */
+        .quick-access {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .quick-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--secondary);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(129, 178, 154, 0.3);
+        }
+
+        .quick-btn:hover {
+            transform: scale(1.1);
+            background: var(--accent);
         }
 
         /* Hero Section */
@@ -282,108 +313,89 @@
             transform: scale(1.05);
         }
 
-        /* Featured Projects */
-        .projects {
+        /* Research Interests */
+        .research-interests {
             padding: 5rem 0;
             background: var(--light);
         }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .project-card {
-            background: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
-        }
-
-        .project-image {
-            height: 200px;
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--white);
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-
-        .project-description {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        .project-link {
-            color: var(--secondary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* Publications */
-        .publications {
-            padding: 5rem 0;
-            background: var(--white);
-        }
-
-        .publication-list {
+        .interests-list {
             max-width: 900px;
             margin: 0 auto;
         }
 
-        .publication-item {
-            padding: 2rem;
-            background: var(--light);
+        .interest-item {
+            padding: 1.5rem;
+            background: var(--white);
             border-radius: 15px;
-            margin-bottom: 2rem;
-            border-left: 4px solid var(--secondary);
-            transition: all 0.3s;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent);
         }
 
-        .publication-item:hover {
-            transform: translateX(10px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        /* Education Section */
+        .education {
+            padding: 5rem 0;
+            background: var(--white);
         }
 
-        .pub-title {
-            font-weight: 600;
+        .education-grid {
+            display: grid;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .education-card {
+            background: var(--light);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--secondary);
+        }
+
+        .degree-title {
+            font-size: 1.5rem;
+            font-weight: 700;
             color: var(--primary);
             margin-bottom: 0.5rem;
         }
 
-        .pub-authors {
-            color: #666;
-            font-style: italic;
+        .university {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
 
-        /* Experience Timeline */
+        .education-date {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .education-details {
+            list-style: none;
+            padding: 0;
+        }
+
+        .education-details li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .education-details li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        /* Professional Experience */
         .experience {
             padding: 5rem 0;
             background: var(--light);
         }
 
         .timeline {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
             padding-left: 50px;
@@ -438,6 +450,100 @@
             margin-bottom: 1rem;
         }
 
+        /* Featured Projects */
+        .projects {
+            padding: 5rem 0;
+            background: var(--white);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: var(--light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+        }
+
+        .project-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--white);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .project-description {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Publications */
+        .publications {
+            padding: 5rem 0;
+            background: var(--light);
+        }
+
+        .publication-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .publication-item {
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--secondary);
+            transition: all 0.3s;
+        }
+
+        .publication-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .pub-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pub-authors {
+            color: #666;
+            font-style: italic;
+        }
+
         /* Contact Section */
         .contact {
             padding: 5rem 0;
@@ -456,23 +562,22 @@
             gap: 2rem;
             margin-top: 2rem;
             list-style: none;
+            flex-wrap: wrap;
         }
 
-        .social-links a {
+        .social-link {
             display: flex;
             align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
+            border-radius: 50px;
             color: var(--white);
             text-decoration: none;
-            font-size: 1.5rem;
             transition: all 0.3s;
         }
 
-        .social-links a:hover {
+        .social-link:hover {
             background: var(--accent);
             transform: translateY(-5px);
         }
@@ -510,6 +615,10 @@
             .timeline {
                 padding-left: 30px;
             }
+
+            .quick-access {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -521,6 +630,9 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -528,16 +640,26 @@
         </div>
     </nav>
 
+    <!-- Quick Access Buttons -->
+    <div class="quick-access">
+        <a href="#home" class="quick-btn" title="Home">🏠</a>
+        <a href="#about" class="quick-btn" title="About">👤</a>
+        <a href="#research" class="quick-btn" title="Research">🔬</a>
+        <a href="#projects" class="quick-btn" title="Projects">💼</a>
+        <a href="#publications" class="quick-btn" title="Publications">📄</a>
+        <a href="#contact" class="quick-btn" title="Contact">✉️</a>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
                 <h1>Fatemeh Nikbakht</h1>
                 <p class="tagline">
-                    <span class="rotating-text">AI Researcher</span> • Data Scientist • Problem Solver
+                    <span class="rotating-text">AI Researcher</span> 
                 </p>
                 <p style="max-width: 600px; font-size: 1.1rem; opacity: 0.9;">
-                    Specializing in Deep Learning, Reinforcement Learning, and solving complex NP-Hard problems with innovative approaches.
+                    Specializing in Deep Learning, Reinforcement Learning, and solving complex NP-Hard problems with innovative approaches. GPA: 3.9/4.0
                 </p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -556,7 +678,7 @@
                     <div class="stat-label">Years Experience</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">3</div>
+                    <div class="stat-number">4</div>
                     <div class="stat-label">Publications</div>
                 </div>
                 <div class="stat-item">
@@ -564,8 +686,8 @@
                     <div class="stat-label">Projects Completed</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">2</div>
-                    <div class="stat-label">Degrees</div>
+                    <div class="stat-number">3.9</div>
+                    <div class="stat-label">Master's GPA</div>
                 </div>
             </div>
         </div>
@@ -581,21 +703,121 @@
                         I am an <span class="highlight">AI researcher and data scientist</span> with a passion for tackling challenging problems and a never-ending thirst for knowledge.
                     </p>
                     <p>
-                        I hold a <span class="highlight">Master's degree in Computer Engineering from Isfahan University of Technology</span>, specializing in deep learning, reinforcement learning, and solving NP-Hard problems.
+                        I hold a <span class="highlight">Master's degree in Computer Engineering from Isfahan University of Technology</span> (GPA: 3.9/4.0), specializing in deep learning, reinforcement learning, and solving NP-Hard problems.
                     </p>
                     <p>
-                        My diverse background includes a Bachelor's degree from <span class="highlight">Sharif University of Technology</span>, which has shaped my strong analytical thinking and problem-solving abilities.
+                        My diverse background includes a Bachelor's degree in Material Science and Engineering from <span class="highlight">Sharif University of Technology</span>, which has shaped my strong analytical thinking and problem-solving abilities.
                     </p>
                 </div>
                 <div class="skills-grid">
-                    <div class="skill-item">🧠 Deep Learning</div>
-                    <div class="skill-item">🤖 Machine Learning</div>
-                    <div class="skill-item">🎯 Reinforcement Learning</div>
-                    <div class="skill-item">📊 Data Mining</div>
-                    <div class="skill-item">⚡ Process Mining</div>
-                    <div class="skill-item">🔧 Optimization</div>
-                    <div class="skill-item">🐍 Python</div>
-                    <div class="skill-item">💾 SQL</div>
+                    <div class="skill-item">Deep Learning</div>
+                    <div class="skill-item">Machine Learning</div>
+                    <div class="skill-item">Reinforcement Learning</div>
+                    <div class="skill-item">Data Mining</div>
+                    <div class="skill-item">Process Mining</div>
+                    <div class="skill-item">Optimization</div>
+                    <div class="skill-item">Python (PyTorch, TensorFlow)</div>
+                    <div class="skill-item">SQL & Databases</div>
+                    <div class="skill-item">MATLAB & C++</div>
+                    <div class="skill-item">Time-Series Analysis</div>
+                    <div class="skill-item">NLP & Computer Vision</div>
+                    <div class="skill-item">Hadoop & Spark</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Interests -->
+    <section class="research-interests" id="research">
+        <div class="container">
+            <h2 class="section-title">Research Interests</h2>
+            <div class="interests-list">
+                <div class="interest-item">
+                    Exploring the statistical and mathematical foundations of machine learning and deep learning
+                </div>
+                <div class="interest-item">
+                    AI-based approaches to solving NP-hard problems in interdisciplinary domains
+                </div>
+                <div class="interest-item">
+                    Graph Neural Networks and attention mechanisms for optimization problems
+                </div>
+                <div class="interest-item">
+                    Swarm intelligence and multi-robot systems coordination
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="degree-title">Master's in Computer Engineering</div>
+                    <div class="university">Isfahan University of Technology, Isfahan, Iran</div>
+                    <div class="education-date">September 2019 - September 2022</div>
+                    <ul class="education-details">
+                        <li><strong>GPA:</strong> 3.9/4.0</li>
+                        <li><strong>Relevant Courses:</strong> Data Mining (A+), Reinforcement Learning (A+), Deep Learning (B), Cloud Computing (A), Swarm Intelligence (A), Advanced Algorithm (A)</li>
+                        <li><strong>Thesis:</strong> <a href="https://github.com/nickinikbakht/Reinforcement_Learning/blob/main/Master's%20thesis%20summary%20-%20Nikbakht.pdf" style="color: var(--secondary);">Solving NP-Hard Combinatorial Optimization Problems Using the CombOpt Zero Approach</a></li>
+                        <li><strong>Supervisor:</strong> Prof. Hossein Falsafain</li>
+                    </ul>
+                </div>
+
+                <div class="education-card">
+                    <div class="degree-title">Bachelor's in Material Science and Engineering</div>
+                    <div class="university">Sharif University of Technology, Tehran, Iran</div>
+                    <div class="education-date">September 2014 - September 2018</div>
+                    <ul class="education-details">
+                        <li><strong>GPA:</strong> 3.1/4.0</li>
+                        <li><strong>Relevant Courses:</strong> Principles of Programming (A+), Numerical Calculation (A)</li>
+                        <li><strong>Thesis:</strong> <a href="https://github.com/nickinikbakht/Other/blob/main/Materials%20Engineering%20Thesis%20Abstracts.pdf" style="color: var(--secondary);">Investigating the Properties of Titanium Dioxide Nanotubes</a></li>
+                        <li><strong>Supervisor:</strong> Prof. Hossein Yoosbashizadeh</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3 class="timeline-title">AI Researcher</h3>
+                    <div class="timeline-company">Arico, Isfahan, Iran</div>
+                    <div class="timeline-date">November 2024 - Present</div>
+                    <p>Working on predictive maintenance projects for electrical motors in industrial companies, including RUL estimation, fault detection, and optimization algorithms.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Data Scientist</h3>
+                    <div class="timeline-company">Entekhab Group, Isfahan, Iran</div>
+                    <div class="timeline-date">November 2023 - November 2024</div>
+                    <p>Developed time-series prediction models using deep learning and machine learning for marketing and production forecasting. Built LSTM models for sales trends analysis.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Data Scientist & Developer</h3>
+                    <div class="timeline-company">MyData, Isfahan, Iran</div>
+                    <div class="timeline-date">May 2022 - November 2023</div>
+                    <p>Led business analysis, process mining, and database tuning projects. Developed full-stack applications for process mining and managed cross-functional teams.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Research Assistant & Teaching Assistant</h3>
+                    <div class="timeline-company">Isfahan University of Technology</div>
+                    <div class="timeline-date">2019 - 2022</div>
+                    <p>Conducted research on NP-Hard problems, graph attention networks, swarm algorithms, and multi-robot task allocation. Taught C++ programming to undergraduate students.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Volunteer Teaching</h3>
+                    <div class="timeline-company">Various Organizations, Iran</div>
+                    <div class="timeline-date">January 2017 - January 2022</div>
+                    <p>Taught mathematics, calculus, algebra, Python, SQL, and algorithms to children and adults in underserved communities, including child laborers through Yarigaran at Sharif University.</p>
                 </div>
             </div>
         </div>
@@ -604,16 +826,56 @@
     <!-- Featured Projects -->
     <section class="projects" id="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Selected Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">🔧</div>
                     <div class="project-content">
-                        <h3 class="project-title">Predictive Maintenance</h3>
+                        <h3 class="project-title">Finding RUL of Motors</h3>
                         <p class="project-description">
-                            Developed deep learning models to predict motor failures and remaining useful life, improving industrial reliability.
+                            Collected operational data via sensors and PLC systems to estimate motor Remaining Useful Life. Developing deep learning models to predict time to failure for predictive maintenance.
                         </p>
-                        <a href="#" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">⚡</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Power Demand Optimization</h3>
+                        <p class="project-description">
+                            Designed dynamic power demand optimization algorithm for industrial furnaces, maximizing energy utilization in real-time while operating within set power budgets.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🏗️</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Crack Detection in Building Stones</h3>
+                        <p class="project-description">
+                            Used Raspberry Pi to collect images, trained CNN to classify stone cracks by type and severity with high accuracy for industrial quality control.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">📈</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Time-Series Prediction</h3>
+                        <p class="project-description">
+                            Built LSTM models for sales forecasting at Entekhab Group using historical data to support marketing and production decisions.
+                        </p>
+                        <a href="https://github.com/nickinikbakht/Deep-Learning/blob/main/Time%20Series/lstm.ipynb" class="project-link">View Code →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">💬</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sentiment Analysis</h3>
+                        <p class="project-description">
+                            Applied NLP techniques to analyze client satisfaction and detect emotions from customer feedback about purchased products.
+                        </p>
                     </div>
                 </div>
 
@@ -622,53 +884,9 @@
                     <div class="project-content">
                         <h3 class="project-title">NP-Hard Problem Solving</h3>
                         <p class="project-description">
-                            Applied CombOpt Zero framework using reinforcement learning to solve complex combinatorial optimization problems.
+                            Applied CombOpt Zero framework and graph attention networks to solve complex combinatorial optimization problems using reinforcement learning.
                         </p>
                         <a href="https://github.com/nickinikbakht/Reinforcement_Learning" class="project-link">View on GitHub →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">👁️</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Computer Vision Systems</h3>
-                        <p class="project-description">
-                            Built CNN models for crack detection in building stones and gender classification with high accuracy.
-                        </p>
-                        <a href="https://github.com/nickinikbakht/Deep-Learning" class="project-link">View Projects →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">📈</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Time-Series Forecasting</h3>
-                        <p class="project-description">
-                            Implemented LSTM models for sales prediction and marketing campaign impact analysis.
-                        </p>
-                        <a href="https://github.com/nickinikbakht/Deep-Learning/blob/main/Time%20Series/lstm.ipynb" class="project-link">View Code →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">⚡</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Power Optimization</h3>
-                        <p class="project-description">
-                            Designed dynamic power demand optimization for industrial furnaces, maximizing energy utilization.
-                        </p>
-                        <a href="#" class="project-link">Learn More →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">💬</div>
-                    <div class="project-content">
-                        <h3 class="project-title">NLP & Sentiment Analysis</h3>
-                        <p class="project-description">
-                            Developed Persian text mining tools and sentiment analysis systems for client satisfaction monitoring.
-                        </p>
-                        <a href="#" class="project-link">Learn More →</a>
                     </div>
                 </div>
             </div>
@@ -678,68 +896,36 @@
     <!-- Publications -->
     <section class="publications" id="publications">
         <div class="container">
-            <h2 class="section-title">Recent Publications</h2>
+            <h2 class="section-title">Publications</h2>
             <div class="publication-list">
+                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Journal Articles</h3>
+                
                 <div class="publication-item">
-                    <div class="pub-title">Improved Attention Approach to Solve NP-Hard Problems</div>
-                    <div class="pub-authors">F. Nikbakht, H. Falsafain</div>
-                    <div class="pub-date">Under Review, 2025</div>
+                    <div class="pub-title">New Clustering Method for Time Series Data</div>
+                    <div class="pub-authors">F. Nikbakht, B. Vahedi Poor</div>
+                    <div class="pub-date">Under Review</div>
                 </div>
 
                 <div class="publication-item">
-                    <div class="pub-title">Solving Multi-Objective Problems Using the Multi-Object BRADO Method</div>
+                    <div class="pub-title">Solving Multi-Objective Problems Using the Multi-Objective BRADO Method</div>
                     <div class="pub-authors">F. Nikbakht, A. Basiri</div>
-                    <div class="pub-date">Submitted, 2025</div>
+                    <div class="pub-date">IEEE Transactions on Evolutionary Computation (Submitted, July 2025)</div>
                 </div>
 
                 <div class="publication-item">
                     <div class="pub-title">BRADO Algorithm for Task Allocation in Multi-Robot Systems</div>
                     <div class="pub-authors">F. Nikbakht, S. Hosseini Semnani</div>
                     <div class="pub-date">2020</div>
-                    <a href="https://drive.google.com/file/d/145OX73lNyGdjb05GGviMJAM5el7O9t4G/view" class="project-link">Read Paper →</a>
+                    <a href="https://drive.google.com/file/d/145OX73lNyGdjb05GGviMJAM5el7O9t4G/view" class="project-link" style="display: block; margin-top: 0.5rem;">Read Paper →</a>
                 </div>
+
+                <h3 style="color: var(--primary); margin: 2rem 0 1.5rem;">Conference Articles</h3>
 
                 <div class="publication-item">
                     <div class="pub-title">Solving d-Distance Independent Set with CombOpt Zero</div>
                     <div class="pub-authors">F. Nikbakht, H. Falsafain, M. Safayani</div>
                     <div class="pub-date">International Conference on Electrical Engineering, 2022</div>
-                    <a href="https://iceeconf.ir/home/Article/d8961970-1c36-46a3-a6fa-efeef2" class="project-link">View Conference Paper →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Timeline -->
-    <section class="experience" id="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3 class="timeline-title">ML Scientist</h3>
-                    <div class="timeline-company">Arico, Isfahan, Iran</div>
-                    <div class="timeline-date">November 2024 - Present</div>
-                    <p>Working on predictive maintenance, optimization, and mathematical modeling for industrial applications.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <h3 class="timeline-title">Data Scientist</h3>
-                    <div class="timeline-company">Entekhab Group, Isfahan, Iran</div>
-                    <div class="timeline-date">November 2023 - November 2024</div>
-                    <p>Specialized in time-series prediction using deep learning and machine learning techniques for business forecasting.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <h3 class="timeline-title">Data Scientist & Developer</h3>
-                    <div class="timeline-company">MyData, Isfahan, Iran</div>
-                    <div class="timeline-date">May 2022 - November 2023</div>
-                    <p>Led business analysis, process mining, database management, and full-stack application development projects.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <h3 class="timeline-title">Master's in Computer Engineering</h3>
-                    <div class="timeline-company">Isfahan University of Technology</div>
-                    <div class="timeline-date">September 2019 - September 2022</div>
-                    <p>Thesis: Solving NP-Hard Combinatorial Optimization Problems Using the CombOpt Zero Approach</p>
+                    <a href="https://iceeconf.ir/home/Article/d8961970-1c36-46a3-a6fa-efeef2" class="project-link" style="display: block; margin-top: 0.5rem;">View Conference Paper →</a>
                 </div>
             </div>
         </div>
@@ -752,12 +938,20 @@
             <p style="font-size: 1.2rem; margin-bottom: 2rem;">
                 I'm always open to discussing new projects, research collaborations, or opportunities.
             </p>
-            <ul class="social-links">
-                <li><a href="https://www.linkedin.com/in/fatemeh-nikbakht-nasrabadi" title="LinkedIn">in</a></li>
-                <li><a href="https://github.com/nickinikbakht" title="GitHub">{ }</a></li>
-                <li><a href="https://t.me/MaNikbakht" title="Telegram">✈</a></li>
-                <li><a href="mailto:fatemehnikbakhtmu@gmail.com" title="Email">✉</a></li>
-            </ul>
+            <div class="social-links">
+                <a href="mailto:fatemehnikbakhtmy@gmail.com" class="social-link">
+                    <span>✉</span> Email
+                </a>
+                <a href="https://www.linkedin.com/in/fatemeh-nikbakht-nasrabadi" class="social-link">
+                    <span>in</span> LinkedIn
+                </a>
+                <a href="https://github.com/nickinikbakht" class="social-link">
+                    <span>{ }</span> GitHub
+                </a>
+                <a href="https://nickinikbakht.github.io/" class="social-link">
+                    <span>🌐</span> Blog
+                </a>
+            </div>
         </div>
     </section>
 
@@ -765,6 +959,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Fatemeh Nikbakht Nasrabadi. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">English: C1 | Persian: Native</p>
         </div>
     </footer>
 
@@ -785,7 +980,8 @@
             'AI Researcher',
             'Data Scientist',
             'Deep Learning Specialist',
-            'Problem Solver'
+            'Problem Solver',
+            'Machine Learning Expert'
         ];
         let currentIndex = 0;
         const rotatingElement = document.querySelector('.rotating-text');
@@ -814,11 +1010,29 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.project-card, .publication-item, .timeline-item').forEach(el => {
+        document.querySelectorAll('.project-card, .publication-item, .timeline-item, .education-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
             observer.observe(el);
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollY = window.pageYOffset;
+
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelector(`.nav-links a[href="#${sectionId}"]`)?.classList.add('active');
+                } else {
+                    document.querySelector(`.nav-links a[href="#${sectionId}"]`)?.classList.remove('active');
+                }
+            });
         });
     </script>
 </body>
