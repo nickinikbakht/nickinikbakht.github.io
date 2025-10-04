@@ -49,7 +49,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 20px;
+            padding: 0.25rem 20px;
         }
 
         .logo {
@@ -88,7 +88,7 @@
         }
 
         .quick-btn {
-            width: 50px;
+            width: 90px;
             height: 50px;
             border-radius: 50%;
             background: var(--secondary);
@@ -225,7 +225,7 @@
         /* Stats Section */
         .stats {
             background: var(--white);
-            padding: 3rem 0;
+            padding: 2rem 0;
             margin-top: -50px;
             position: relative;
             z-index: 2;
@@ -234,12 +234,12 @@
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
             text-align: center;
         }
 
         .stat-item {
-            padding: 2rem;
+            padding: 1.5rem;
             background: var(--light);
             border-radius: 15px;
             transition: transform 0.3s;
@@ -263,7 +263,7 @@
 
         /* About Section */
         .about {
-            padding: 5rem 0;
+            padding: 3rem 0;
             background: var(--white);
         }
 
@@ -271,15 +271,43 @@
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             color: var(--primary);
         }
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: 300px 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-photo {
+            position: relative;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .profile-photo img:hover {
+            transform: scale(1.05);
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            border-radius: 15px;
+            display: flex;
             align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
 
         .about-text p {
@@ -315,7 +343,7 @@
 
         /* Research Interests */
         .research-interests {
-            padding: 5rem 0;
+            padding: 2.5rem 0;
             background: var(--light);
         }
 
@@ -325,29 +353,156 @@
         }
 
         .interest-item {
-            padding: 1.5rem;
+            padding: 0.7rem 1rem;
             background: var(--white);
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+            border-left: 3px solid var(--accent);
+            font-size: 0.95rem;
+        }
+
+        /* Materials Engineering Background */
+        .materials-background {
+            padding: 3rem 0;
+            background: var(--white);
+        }
+
+        .materials-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .materials-card {
+            background: var(--light);
+            padding: 1.5rem;
             border-radius: 15px;
+            transition: all 0.3s;
+            border-top: 4px solid var(--secondary);
+        }
+
+        .materials-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .materials-icon {
+            font-size: 3rem;
             margin-bottom: 1rem;
+        }
+
+        .materials-card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .materials-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .materials-link {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .materials-link:hover {
+            color: var(--accent);
+        }
+
+        .materials-skills-section {
+            margin-top: 3rem;
+        }
+
+        .materials-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-bridge {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s;
+        }
+
+        .skill-bridge:hover {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .skill-bridge:hover .skill-arrow {
+            transform: translateX(5px);
+        }
+
+        .skill-bridge-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            flex: 1;
+        }
+
+        .skill-arrow {
+            font-size: 1.5rem;
+            color: var(--accent);
+            transition: transform 0.3s;
+        }
+
+        .highlight-box {
+            background: var(--light);
             border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box strong {
+            color: var(--primary);
+        }
+
+        .background-section-title {
+            font-size: 1.8rem;
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
 
         /* Education Section */
         .education {
-            padding: 5rem 0;
+            padding: 3rem 0;
             background: var(--white);
         }
 
         .education-grid {
             display: grid;
-            gap: 3rem;
+            gap: 2rem;
             max-width: 1000px;
             margin: 0 auto;
         }
 
         .education-card {
             background: var(--light);
-            padding: 2.5rem;
+            padding: 2rem;
             border-radius: 15px;
             border-left: 5px solid var(--secondary);
         }
@@ -390,7 +545,7 @@
 
         /* Professional Experience */
         .experience {
-            padding: 5rem 0;
+            padding: 3rem 0;
             background: var(--light);
         }
 
@@ -413,8 +568,8 @@
 
         .timeline-item {
             position: relative;
-            margin-bottom: 3rem;
-            padding: 2rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
             background: var(--white);
             border-radius: 15px;
         }
@@ -452,15 +607,15 @@
 
         /* Featured Projects */
         .projects {
-            padding: 5rem 0;
+            padding: 3rem 0;
             background: var(--white);
         }
 
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
         .project-card {
@@ -510,7 +665,7 @@
 
         /* Publications */
         .publications {
-            padding: 5rem 0;
+            padding: 3rem 0;
             background: var(--light);
         }
 
@@ -520,10 +675,10 @@
         }
 
         .publication-item {
-            padding: 2rem;
+            padding: 1.5rem;
             background: var(--white);
             border-radius: 15px;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             border-left: 4px solid var(--secondary);
             transition: all 0.3s;
         }
@@ -546,7 +701,7 @@
 
         /* Contact Section */
         .contact {
-            padding: 5rem 0;
+            padding: 3rem 0;
             background: var(--primary);
             color: var(--white);
             text-align: center;
@@ -604,6 +759,15 @@
                 grid-template-columns: 1fr;
             }
 
+            .profile-photo {
+                max-width: 250px;
+                margin: 0 auto 2rem;
+            }
+
+            .photo-placeholder {
+                height: 300px;
+            }
+
             .nav-links {
                 gap: 1rem;
             }
@@ -630,8 +794,9 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#education">Education</a></li>
+                <li><a href="#research">Interests</a></li>
+                <li><a href="#materials">Background</a></li>
+                <li><a href="#education">Educations</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#publications">Publications</a></li>
@@ -642,12 +807,15 @@
 
     <!-- Quick Access Buttons -->
     <div class="quick-access">
-        <a href="#home" class="quick-btn" title="Home">🏠</a>
-        <a href="#about" class="quick-btn" title="About">👤</a>
-        <a href="#research" class="quick-btn" title="Research">🔬</a>
-        <a href="#projects" class="quick-btn" title="Projects">💼</a>
-        <a href="#publications" class="quick-btn" title="Publications">📄</a>
-        <a href="#contact" class="quick-btn" title="Contact">✉️</a>
+        <a href="#home" class="quick-btn" title="Home">Home</a>
+        <a href="#about" class="quick-btn" title="About">About</a>
+        <a href="#research" class="quick-btn" title="Interests">Interests</a>
+        <a href="#materials" class="quick-btn" title="Materials">Background</a>
+        <a href="#education" class="quick-btn" title="Education">Education</a>
+        <a href="#experience" class="quick-btn" title="Experience">Experience</a>
+        <a href="#projects" class="quick-btn" title="Projects">Projects</a>
+        <a href="#publications" class="quick-btn" title="Publications">Publications</a>
+        <a href="#contact" class="quick-btn" title="Contact">Contact</a>
     </div>
 
     <!-- Hero Section -->
@@ -656,10 +824,10 @@
             <div class="hero-content">
                 <h1>Fatemeh Nikbakht</h1>
                 <p class="tagline">
-                    <span class="rotating-text">AI Researcher</span> 
+                    <span class="rotating-text">AI Researcher</span> • Data Scientist • Problem Solver
                 </p>
                 <p style="max-width: 600px; font-size: 1.1rem; opacity: 0.9;">
-                    Specializing in Deep Learning, Reinforcement Learning, and solving complex NP-Hard problems with innovative approaches.
+                    Master's in Computer Engineering specializing in Deep Learning, Reinforcement Learning, and solving complex NP-Hard problems. Bachelor's in Materials Engineering from Sharif University - a unique interdisciplinary foundation combining computational intelligence with physical sciences.
                 </p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -698,15 +866,19 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
+                <div class="profile-photo">
+                    <img src="images/nicki.jpg" alt="Fatemeh Nikbakht">
+                </div>
+                
                 <div class="about-text">
                     <p>
-                        I am an <span class="highlight">AI researcher and data scientist</span> with a passion for tackling challenging problems and a never-ending thirst for knowledge.
+                        I am an <span class="highlight">AI researcher and data scientist</span> with a passion for tackling challenging problems through interdisciplinary approaches.
                     </p>
                     <p>
-                        I hold a <span class="highlight">Master's degree in Computer Engineering from Isfahan University of Technology</span>, specializing in deep learning, reinforcement learning, and solving NP-Hard problems.
+                        I hold a <span class="highlight">Master's in Computer Engineering from Isfahan University of Technology</span>, specializing in deep learning, reinforcement learning, and NP-Hard optimization using graph attention networks and swarm intelligence.
                     </p>
                     <p>
-                        My diverse background includes a Bachelor's degree in Material Science and Engineering from <span class="highlight">Sharif University of Technology</span>, which has shaped my strong analytical thinking and problem-solving abilities.
+                        My unique <span class="highlight">interdisciplinary foundation</span> combines this with a <span class="highlight">Bachelor's in Material Science from Sharif University of Technology</span>, enabling me to develop physically-informed AI solutions for industrial applications where understanding both computational models and physical systems is crucial.
                     </p>
                 </div>
                 <div class="skills-grid">
@@ -744,6 +916,105 @@
                 <div class="interest-item">
                     Swarm intelligence and multi-robot systems coordination
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Engineering Background -->
+    <section class="materials-background" id="materials">
+        <div class="container">
+            <h2 class="section-title">Interdisciplinary Background</h2>
+            
+            <!-- Computer Engineering Section -->
+            <div class="background-section">
+                <h3 class="background-section-title">Computer Engineering Expertise</h3>
+                
+                <div class="materials-grid">
+                    <div class="materials-card">
+                        <div class="materials-icon">🤖</div>
+                        <h3 class="materials-card-title">Deep Learning & AI</h3>
+                        <p>Advanced research in CNNs, RNNs, LSTMs, reinforcement learning, and graph neural networks. Developed novel attention mechanisms for NP-hard optimization problems.</p>
+                        <a href="https://github.com/nickinikbakht/Reinforcement_Learning/blob/main/Master's%20thesis%20summary%20-%20Nikbakht.pdf" class="materials-link">Master's Thesis</a>
+                    </div>
+
+                    <div class="materials-card">
+                        <div class="materials-icon">🎯</div>
+                        <h3 class="materials-card-title">Optimization & Algorithms</h3>
+                        <p>Specialized in combinatorial optimization, swarm intelligence, and advanced algorithms. Developed BRADO algorithm for multi-robot systems.</p>
+                    </div>
+
+                    <div class="materials-card">
+                        <div class="materials-icon">📊</div>
+                        <h3 class="materials-card-title">Data Science & Mining</h3>
+                        <p>Expert in time-series analysis, process mining, and ML systems. Proficient in PyTorch, TensorFlow, SQL, Hadoop, and Spark.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Materials Engineering Section -->
+            <div class="background-section" style="margin-top: 3rem;">
+                <h3 class="background-section-title">Materials Engineering Foundation</h3>
+                
+                <div class="materials-grid">
+                    <div class="materials-card">
+                        <div class="materials-icon">🔬</div>
+                        <h3 class="materials-card-title">Nanomaterials Research</h3>
+                        <p>Bachelor's thesis on TiO2 nanotubes: synthesis via anodization, photovoltaic properties, and materials characterization.</p>
+                        <a href="https://github.com/nickinikbakht/Other/blob/main/Materials%20Engineering%20Thesis%20Abstracts.pdf" class="materials-link">Thesis Abstract</a>
+                    </div>
+
+                    <div class="materials-card">
+                        <div class="materials-icon">⚙️</div>
+                        <h3 class="materials-card-title">Computational Methods</h3>
+                        <p>Experience with Abaqus simulation, AutoCAD design, and numerical methods for materials modeling and behavior prediction.</p>
+                    </div>
+
+                    <div class="materials-card">
+                        <div class="materials-icon">🔧</div>
+                        <h3 class="materials-card-title">Industrial Applications</h3>
+                        <p>Foundation in process optimization, failure analysis, and quality control—directly applicable to predictive maintenance AI.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="materials-skills-section">
+                <h3 class="section-subtitle">Interdisciplinary Synergy</h3>
+                <div class="materials-skills">
+                    <div class="skill-bridge">
+                        <div class="skill-bridge-label">Experimental Design</div>
+                        <div class="skill-arrow">→</div>
+                        <div class="skill-bridge-label">ML Experiment Design</div>
+                    </div>
+                    <div class="skill-bridge">
+                        <div class="skill-bridge-label">Materials Analysis</div>
+                        <div class="skill-arrow">→</div>
+                        <div class="skill-bridge-label">Feature Engineering</div>
+                    </div>
+                    <div class="skill-bridge">
+                        <div class="skill-bridge-label">Process Optimization</div>
+                        <div class="skill-arrow">→</div>
+                        <div class="skill-bridge-label">Algorithm Optimization</div>
+                    </div>
+                    <div class="skill-bridge">
+                        <div class="skill-bridge-label">Failure Analysis</div>
+                        <div class="skill-arrow">→</div>
+                        <div class="skill-bridge-label">Predictive Maintenance</div>
+                    </div>
+                    <div class="skill-bridge">
+                        <div class="skill-bridge-label">Physical Systems</div>
+                        <div class="skill-arrow">→</div>
+                        <div class="skill-bridge-label">Physics-Informed AI</div>
+                    </div>
+                    <div class="skill-bridge">
+                        <div class="skill-bridge-label">Numerical Methods</div>
+                        <div class="skill-arrow">→</div>
+                        <div class="skill-bridge-label">Computational Efficiency</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 2rem;">
+                <strong>Unique Advantage:</strong> This rare combination enables me to bridge theoretical algorithms with real-world industrial systems, developing AI solutions that are both mathematically rigorous and physically meaningful.
             </div>
         </div>
     </section>
@@ -829,13 +1100,14 @@
             <h2 class="section-title">Selected Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">🔧</div>
+                    <div class="project-image">⚙️</div>
                     <div class="project-content">
                         <h3 class="project-title">Finding RUL of Motors</h3>
                         <p class="project-description">
                             Collected operational data via sensors and PLC systems to estimate motor Remaining Useful Life. Developing deep learning models to predict time to failure for predictive maintenance.
                         </p>
                         <a href="PredictiveMaintenance.html" class="project-link">Learn more →</a>
+
                     </div>
                 </div>
 
@@ -850,7 +1122,7 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">🏗️</div>
+                    <div class="project-image">🔍</div>
                     <div class="project-content">
                         <h3 class="project-title">Crack Detection in Building Stones</h3>
                         <p class="project-description">
@@ -860,7 +1132,7 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">📈</div>
+                    <div class="project-image">📊</div>
                     <div class="project-content">
                         <h3 class="project-title">Time-Series Prediction</h3>
                         <p class="project-description">
@@ -871,7 +1143,7 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">💬</div>
+                    <div class="project-image">💭</div>
                     <div class="project-content">
                         <h3 class="project-title">Sentiment Analysis</h3>
                         <p class="project-description">
@@ -881,7 +1153,7 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">🧩</div>
+                    <div class="project-image">🎯</div>
                     <div class="project-content">
                         <h3 class="project-title">NP-Hard Problem Solving</h3>
                         <p class="project-description">
@@ -941,16 +1213,13 @@
             </p>
             <div class="social-links">
                 <a href="mailto:fatemehnikbakhtmy@gmail.com" class="social-link">
-                    <span>✉</span> Email
+                    <span>@</span> Email
                 </a>
                 <a href="https://www.linkedin.com/in/fatemeh-nikbakht-nasrabadi" class="social-link">
                     <span>in</span> LinkedIn
                 </a>
                 <a href="https://github.com/nickinikbakht" class="social-link">
-                    <span>{ }</span> GitHub
-                </a>
-                <a href="https://nickinikbakht.github.io/" class="social-link">
-                    <span>🌐</span> Blog
+                    <span>&lt;/&gt;</span> GitHub
                 </a>
             </div>
         </div>
