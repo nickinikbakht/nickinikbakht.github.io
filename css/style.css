@@ -83,7 +83,7 @@
             width: 90px;
             height: 50px;
             border-radius: 50%;
-            background: var(--secondary);
+            background: #51536c;
             color: var(--white);
             display: flex;
             align-items: center;

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Fatemeh Nikbakht Nasrabadi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/blog_style.css">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">FN</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Research Blog & Insights</h1>
+            <p>Exploring AI, Machine Learning, and Computational Optimization</p>
+        </div>
+    </section>
+
+    <!-- Search & Filter -->
+    <section class="blog-controls">
+        <div class="container">
+            <div class="controls-wrapper">
+                <div class="search-box">
+                    <input type="text" placeholder="Search articles..." id="searchInput">
+                </div>
+                <div class="filter-tags">
+                    <button class="tag-filter active" data-filter="all">All</button>
+                    <button class="tag-filter" data-filter="deep-learning">Deep Learning</button>
+                    <button class="tag-filter" data-filter="optimization">Optimization</button>
+                    <button class="tag-filter" data-filter="industry">Industry</button>
+                    <button class="tag-filter" data-filter="tutorial">Tutorial</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-layout">
+                <div class="main-content">
+                    <!-- Featured Post -->
+                    <article class="featured-post">
+                        <div class="featured-image">📊</div>
+                        <div class="featured-content">
+                            <span class="featured-badge">Featured</span>
+                            <div class="blog-tags">
+                                <span class="blog-tag">Deep Learning</span>
+                                <span class="blog-tag">Optimization</span>
+                            </div>
+                            <h2 class="blog-title">Solving NP-Hard Problems with Attention Mechanisms</h2>
+                            <p class="blog-excerpt">
+                                An in-depth exploration of how attention-based neural networks can be applied to combinatorial optimization problems, achieving near-optimal solutions for traditionally intractable problems.
+                            </p>
+                            <div class="blog-meta">
+                                <span class="blog-date">📅 January 15, 2025</span>
+                                <span class="blog-reading-time">⏱ 12 min read</span>
+                            </div>
+                            <a href="blog-post.html" class="blog-link">Read Full Article →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Grid -->
+                    <div class="blog-grid">
+                        <!-- Blog Post 1 -->
+                        <article class="blog-card">
+                            <div class="blog-image">🤖</div>
+                            <div class="blog-card-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date">📅 January 10, 2025</span>
+                                    <span class="blog-reading-time">⏱ 8 min</span>
+                                </div>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Machine Learning</span>
+                                    <span class="blog-tag">Industry</span>
+                                </div>
+                                <h3 class="blog-title">Predictive Maintenance: From Theory to Practice</h3>
+                                <p class="blog-excerpt">
+                                    Lessons learned from implementing real-world predictive maintenance systems for electrical motors in industrial settings.
+                                </p>
+                                <a href="#" class="blog-link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 2 -->
+                        <article class="blog-card">
+                            <div class="blog-image">🎯</div>
+                            <div class="blog-card-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date">📅 January 5, 2025</span>
+                                    <span class="blog-reading-time">⏱ 6 min</span>
+                                </div>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Reinforcement Learning</span>
+                                </div>
+                                <h3 class="blog-title">Understanding CombOpt Zero Framework</h3>
+                                <p class="blog-excerpt">
+                                    A comprehensive guide to the CombOpt Zero approach for solving combinatorial optimization problems using reinforcement learning.
+                                </p>
+                                <a href="#" class="blog-link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 3 -->
+                        <article class="blog-card">
+                            <div class="blog-image">📈</div>
+                            <div class="blog-card-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date">📅 December 28, 2024</span>
+                                    <span class="blog-reading-time">⏱ 10 min</span>
+                                </div>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Time-Series</span>
+                                    <span class="blog-tag">Tutorial</span>
+                                </div>
+                                <h3 class="blog-title">LSTM Networks for Sales Forecasting</h3>
+                                <p class="blog-excerpt">
+                                    Step-by-step tutorial on building and deploying LSTM models for accurate time-series prediction in business contexts.
+                                </p>
+                                <a href="#" class="blog-link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 4 -->
+                        <article class="blog-card">
+                            <div class="blog-image">🔬</div>
+                            <div class="blog-card-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date">📅 December 20, 2024</span>
+                                    <span class="blog-reading-time">⏱ 7 min</span>
+                                </div>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Computer Vision</span>
+                                </div>
+                                <h3 class="blog-title">CNNs for Industrial Quality Control</h3>
+                                <p class="blog-excerpt">
+                                    How convolutional neural networks revolutionize defect detection and quality assurance in manufacturing environments.
+                                </p>
+                                <a href="#" class="blog-link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 5 -->
+                        <article class="blog-card">
+                            <div class="blog-image">⚙️</div>
+                            <div class="blog-card-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date">📅 December 15, 2024</span>
+                                    <span class="blog-reading-time">⏱ 9 min</span>
+                                </div>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Optimization</span>
+                                    <span class="blog-tag">Industry</span>
+                                </div>
+                                <h3 class="blog-title">Multi-Robot Task Allocation with BRADO</h3>
+                                <p class="blog-excerpt">
+                                    Exploring the BRADO algorithm for efficient task distribution in multi-robot systems with real-world applications.
+                                </p>
+                                <a href="#" class="blog-link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 6 -->
+                        <article class="blog-card">
+                            <div class="blog-image">💡</div>
+                            <div class="blog-card-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date">📅 December 10, 2024</span>
+                                    <span class="blog-reading-time">⏱ 5 min</span>
+                                </div>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">NLP</span>
+                                </div>
+                                <h3 class="blog-title">Sentiment Analysis for Business Intelligence</h3>
+                                <p class="blog-excerpt">
+                                    Leveraging natural language processing to extract actionable insights from customer feedback and reviews.
+                                </p>
+                                <a href="#" class="blog-link">Read More →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Recent Posts -->
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Recent Posts</h3>
+                        <ul class="recent-posts">
+                            <li class="recent-post-item">
+                                <a href="#" class="recent-post-link">Attention Mechanisms in Optimization</a>
+                                <div class="recent-post-date">Jan 15, 2025</div>
+                            </li>
+                            <li class="recent-post-item">
+                                <a href="#" class="recent-post-link">Predictive Maintenance Best Practices</a>
+                                <div class="recent-post-date">Jan 10, 2025</div>
+                            </li>
+                            <li class="recent-post-item">
+                                <a href="#" class="recent-post-link">CombOpt Zero Framework Guide</a>
+                                <div class="recent-post-date">Jan 5, 2025</div>
+                            </li>
+                            <li class="recent-post-item">
+                                <a href="#" class="recent-post-link">LSTM for Time-Series</a>
+                                <div class="recent-post-date">Dec 28, 2024</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Categories</h3>
+                        <ul class="categories-list" id="categoriesList">
+                            <!-- Categories will be automatically generated -->
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Subscribe</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Get the latest articles delivered to your inbox.</p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <input type="email" id="emailInput" placeholder="Your email" required>
+                            <button type="submit">Subscribe</button>
+                            <div id="subscribeMessage" style="display: none; margin-top: 0.5rem; padding: 0.5rem; border-radius: 5px; font-size: 0.9rem;"></div>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Fatemeh Nikbakht Nasrabadi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Auto-generate categories from blog posts
+        function generateCategories() {
+            const categoryCounts = {};
+            
+            // Count categories from all blog cards
+            blogCards.forEach(card => {
+                const tags = card.querySelectorAll('.blog-tag');
+                tags.forEach(tag => {
+                    const category = tag.textContent.trim();
+                    categoryCounts[category] = (categoryCounts[category] || 0) + 1;
+                });
+            });
+            
+            // Also count from featured post
+            const featuredTags = document.querySelectorAll('.featured-post .blog-tag');
+            featuredTags.forEach(tag => {
+                const category = tag.textContent.trim();
+                categoryCounts[category] = (categoryCounts[category] || 0) + 1;
+            });
+            
+            // Sort categories by count (descending)
+            const sortedCategories = Object.entries(categoryCounts)
+                .sort((a, b) => b[1] - a[1]);
+            
+            // Generate HTML for categories
+            const categoriesList = document.getElementById('categoriesList');
+            categoriesList.innerHTML = sortedCategories.map(([category, count]) => `
+                <li class="category-item">
+                    <a href="#" class="category-link" data-category="${category}">${category}</a>
+                    <span class="category-count">${count}</span>
+                </li>
+            `).join('');
+            
+            // Add click handlers to category links
+            const categoryLinks = document.querySelectorAll('.category-link');
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const category = link.getAttribute('data-category');
+                    filterByCategory(category);
+                });
+            });
+        }
+        
+        // Filter posts by category
+        function filterByCategory(category) {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.value = ''; // Clear search
+            
+            blogCards.forEach(card => {
+                const tags = card.querySelector('.blog-tags').textContent;
+                if (tags.includes(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Update filter buttons
+            filterBtns.forEach(btn => btn.classList.remove('active'));
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Newsletter subscription
+        const newsletterForm = document.getElementById('newsletterForm');
+        const emailInput = document.getElementById('emailInput');
+        const subscribeMessage = document.getElementById('subscribeMessage');
+        
+        // Store subscribers
+        let subscribers = JSON.parse(localStorage.getItem('blogSubscribers') || '[]');
+        
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const email = emailInput.value.trim().toLowerCase();
+            
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showMessage('Please enter a valid email address.', 'error');
+                return;
+            }
+            
+            // Check if already subscribed
+            if (subscribers.includes(email)) {
+                showMessage('You are already subscribed!', 'info');
+                emailInput.value = '';
+                return;
+            }
+            
+            // Add to subscribers
+            subscribers.push(email);
+            localStorage.setItem('blogSubscribers', JSON.stringify(subscribers));
+            
+            // Show success message
+            showMessage('Successfully subscribed! Thank you for joining.', 'success');
+            emailInput.value = '';
+            
+            // Optional: Send to backend/email service
+            // sendToBackend(email);
+        });
+        
+        function showMessage(text, type) {
+            subscribeMessage.textContent = text;
+            subscribeMessage.style.display = 'block';
+            
+            // Set colors based on type
+            if (type === 'success') {
+                subscribeMessage.style.backgroundColor = '#d4edda';
+                subscribeMessage.style.color = '#155724';
+                subscribeMessage.style.border = '1px solid #c3e6cb';
+            } else if (type === 'error') {
+                subscribeMessage.style.backgroundColor = '#f8d7da';
+                subscribeMessage.style.color = '#721c24';
+                subscribeMessage.style.border = '1px solid #f5c6cb';
+            } else if (type === 'info') {
+                subscribeMessage.style.backgroundColor = '#d1ecf1';
+                subscribeMessage.style.color = '#0c5460';
+                subscribeMessage.style.border = '1px solid #bee5eb';
+            }
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                subscribeMessage.style.display = 'none';
+            }, 5000);
+        }
+        
+        // Optional: Function to send email to backend
+        function sendToBackend(email) {
+            // Example: Send to your backend API
+            /*
+            fetch('/api/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: email })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Subscription sent to backend:', data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+            */
+        }
+
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.tag-filter');
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                blogCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'flex';
+                    } else {
+                        const tags = card.querySelector('.blog-tags').textContent.toLowerCase();
+                        if (tags.includes(filter.replace('-', ' '))) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            blogCards.forEach(card => {
+                const title = card.querySelector('.blog-title').textContent.toLowerCase();
+                const excerpt = card.querySelector('.blog-excerpt').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.blog-card, .featured-post').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+        
+        // Initialize categories on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            generateCategories();
+        });
+    </script>
+</body>
+</html>
